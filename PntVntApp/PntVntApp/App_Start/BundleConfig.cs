@@ -21,10 +21,10 @@ namespace PntVntApp
 
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include("~/Scripts/modernizr-*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/jquerymobile").Include("~/Scripts/jquery.mobile*"));
+
             //bundles.Add(new ScriptBundle("~/bundles/jqueryInicio").Include("~/Scripts/JSCargaInicial.js"));
-
-            //bundles.Add(new ScriptBundle("~/bundles/jquerymobile").Include("~/Scripts/jquery.mobile*"));
-
+            
             #endregion
 
             #region CSS

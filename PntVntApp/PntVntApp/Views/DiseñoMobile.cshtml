@@ -1,20 +1,33 @@
 ﻿<!DOCTYPE html>
 <html>
-    <head>
-        <title>@ViewBag.Title</title>
-        @* àgregar rel:nombre de la aplicacion *@
-        <link rel="icon" href="@Url.Content("~/icon.ico")" type="image/x-icon" />
-        
-        @*@Styles.Render("~/Content/themes/base/css", "~/Content/css")
+<head>
+    <title>@Page.Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <link rel="icon" href="@Url.Content("~/icon.ico")" type="image/x-icon" />
+
+    @*@Styles.Render("~/Content/themes/base/css", "~/Content/css")
         @Scripts.Render("~/bundles/modernizr")*@
 
-        @Scripts.Render("~/bundles/modernizr")
-        @RenderSection("head", required: false)
-    </head>
-    <body>
+    @Styles.Render("~/Content/mobilecss")
+    @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("head", required: false)
+</head>
+<body>
+
+    <section data-role="page" data-theme="b">
+
+        @RenderSection("HeaderFrm", required: false)
+
+
         @RenderBody()
-        
-        @Scripts.Render("~/bundles/jquery")
-        @RenderSection("scripts", required: false)
-    </body>
+
+    </section>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jquerymobile")
+
+    @RenderSection("scripts", required: false)
+</body>
 </html>

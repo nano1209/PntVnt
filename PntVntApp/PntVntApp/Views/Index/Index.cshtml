@@ -1,6 +1,28 @@
 ﻿@{
-    ViewBag.Title = @ViewBag.Title;
+    Page.Title = @ViewBag.Title;
     Layout = "~/Views/DiseñoMobile.cshtml";
 }
 
-<h2>Index - @ViewBag.ufo</h2>
+@section HeaderFrm{
+
+    <section data-role="header" data-position="fixed">
+        <h1>@ViewBag.TituloFrm</h1>
+    </section>
+}
+
+<section id="page" data-role="content">
+
+    <ul data-role="listview" data-theme="a" data-inset="true">
+        <li data-theme="b" data-role="list-divider">Usuario</li>
+        <li><a href="#">Iniciar Sesion</a></li>
+        <li><a href="#">Registra tu empresa</a></li>
+    </ul>
+
+    <ul data-role="listview" data-theme="a" data-inset="true">
+        <li data-theme="b" data-role="list-divider">Contactanos</li>
+        <li><a href="#">Informacion</a></li>
+        <li><a href="#">Conocenos</a></li>
+        <li><a href="#">Reportar problema</a></li>
+    </ul>
+
+</section>
