@@ -14,6 +14,7 @@ namespace PntVntApp.Controllers
         public ActionResult Index()
         {
             ViewBag.ufo = "I'm an ufo";
+            ViewBag.Title = "hola mundo -- app punto de venta";
             return View();
         }
 
